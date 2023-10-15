@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="/css/lightbox.css"> -->
+    <title>Travel Blog - Contact</title>
     <style>
         * {
             margin: 0;
@@ -14,13 +13,14 @@
         }
 
         body {
-            /* display: grid;
-        grid-template-areas:
-            'nav nav nav nav'
-            'section1 section1 section1 section1'
-            'footer footer footer footer'
-        ; */
-            background: #0c5f74;
+            display: grid;
+            grid-template-areas:
+                'nav nav nav nav'
+                'main main main main'
+                'contact contact contact contact'
+                'footer footer footer footer'
+            ;
+            background: #327a9d;
         }
 
         /* Navbar */
@@ -28,7 +28,7 @@
             grid-area: nav;
             /* border: 2px solid blue; */
             font-family: cursive;
-            background: #46a3cf;
+            background: #6595a9;
         }
 
         #nav img {
@@ -47,10 +47,11 @@
         }
 
         /* main */
-        main{
+        main {
+            grid-area: main;
             /* border: 2px solid red; */
-            background: url(/img/photosBg.jpg) no-repeat center center/cover;
-            height:75vh;
+            background: url(/img/contactBG.jpg) no-repeat center center/cover;
+            height: 75vh;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -58,7 +59,8 @@
             justify-content: center;
             text-align: center;
         }
-        main div{
+
+        main div {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -67,63 +69,110 @@
             width: 50%;
 
         }
-        main div p{
-            font-size: 2.4rem;
-            padding: 30px;
-            color: white;
-        }
 
-        /* container */
-        .container {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            /* grid-area: section1; */
-            /* border: 2px solid red; */
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-            flex-wrap: wrap;
-            /* border: 2px solid rgb(146, 22, 109); */
-
-        }
-
-        .gallery .galleryItems {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .gallery .galleryItems img {
-            /* width: 100%; */
-            margin: 5px;
-            border-radius: 5px;
-            width: 300px;
-            height: 300px;
-            filter: grayscale(50%);
-            transition: all 0.5s ease-in-out 0s;
-        }
-
-        .gallery .galleryItems img:hover {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-
-        .gallery .galleryItems h3 {
+        main div p {
             font-size: 2rem;
-            font-family: cursive;
+            padding: 30px;
+            color: rgb(255, 205, 205);
+        }
+
+        /* form */
+        #contact {
+            grid-area: contact;
+            /* border: 2px solid red; */
+            width: 98.8vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin: 10px; */
+            padding: 20px;
+        }
+
+        #contact #containForm {
+            border: 1px solid rgb(31, 5, 92);
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid skyblue;
+            border-radius: 12px;
+            background: #063c52;
+        }
+
+        #contact #containForm form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contact #containForm form label {
+            font-size: 1.4rem;
+            color: skyblue;
+            padding: 5px;
+        }
+
+        #contact #containForm form input {
+            width: 35rem;
+            height: 2rem;
+            background: #517a81;
+            border: 2px solid #517a81;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        #contact #containForm form textarea {
+            width: 35rem;
+            background: #4a737a;
+            border: 2px solid #4a737a;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        #contact #containForm form button {
+            width: 35rem;
+            height: 2rem;
+            background: skyblue;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 35px;
+            font-size: 1.2rem;
+        }
+
+        #contact #containForm form button:hover {
+            cursor: pointer;
+            background: rgb(154, 192, 207);
+            padding: 7px;
+            font-size: 1rem;
             font-weight: bold;
+        }
+
+        /* socialLinks */
+        #contact .containLinks {
+            /* border: 2px solid yellow; */
+            width: 50%;
+            height: 105%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #contact .containLinks .links {
+            margin: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #contact .containLinks .links a {
+            margin: 29px;
         }
 
         /* footer */
@@ -177,21 +226,21 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-family: monospace;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #292929;
+            color: white;
+            text-align: center;
         }
 
         span {
             font-weight: bold;
             font-size: 1.1rem;
-            color: #f9004d;
         }
 
         p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             padding: 30px;
         }
 
@@ -221,67 +270,47 @@
         <ul>
             <li><img src="/img/logo.svg" alt="logo"></li>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/otherHTML_Files/stories.html">Stories</a></li>
-            <li><a href="/otherHTML_Files/destinations.html">Destinations</a></li>
-            <li><a href="/otherHTML_Files/photos.html">Photos</a></li>
-            <li><a href="/otherHTML_Files/contact.html">Contact</a></li>
+            <li><a href="/stories.html">Stories</a></li>
+            <li><a href="/destinations.html">Destinations</a></li>
+            <li><a href="/photos.html">Photos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
         <div>
-        <h1>Welcome Everyone</h1>
-        <p>I'm excited to share with you how I have chosen to represent my travel photo gallery</p>
-    </div>
+            <h1>HELLO</h1>
+            <p>Thank you for visiting our Website. We appreciate your interest and value your feedback, questions, and suggestions. If you have any inquiries about our blog posts, travel destinations, or anything related to travel, please don't hesitate to reach out. We're here to help.</p>
+        </div>
     </main>
-    <div class="container">
-        <div class="gallery">
-            <div class="galleryItems">
-                <a href="/img/arangKel.jpg"><img src="/img/arangKel.jpg" alt="" data-lightbox="models"
-                        data-title="Arang Kel"></a>
-                <h3>Arang Kel</h3>
-
-            </div>
-            <div class="galleryItems">
-                <a href="/img/karimabad.jpg"><img src="/img/karimabad.jpg" alt="" data-lightbox="models"
-                        data-title="Karimabad"></a>
-                <h3>Karimabad</h3>
-            </div>
-            <div class="galleryItems">
-                <a href="/img/swat.jpg"><img src="/img/swat.jpg" alt="" data-lightbox="models" data-title="Swat"></a>
-                <h3>Swat</h3>
-            </div>
-            <div class="galleryItems">
-                <a href="/img/valley.jpg"><img src="/img/valley.jpg" alt="" data-lightbox="models"
-                        data-title="Valleys"></a>
-                <h3>Dir Valleys</h3>
-            </div>
-            <div class="galleryItems">
-                <a href="/img/naltarValley.jpg"><img src="/img/naltarValley.jpg" alt="" data-lightbox="models"
-                        data-title="Naltar Valley"></a>
-                <h3>Naltar Valleys</h3>
-            </div>
-            <div class="galleryItems">
-                <a href="/img/kumratWays.jpg"><img src="/img/kumratWays.jpg" alt="" data-lightbox="models"
-                        data-title="Kumrat"></a>
-                <h3>Kumrat Roads</h3>
-            </div>
-            <div class="galleryItems">
-                <a href="/img/karimabad2.jpg"><img src="/img/karimabad2.jpg" alt="" data-lightbox="models"
-                        data-title="Karimabad"></a>
-                <h3>Karimabad Meadows</h3>
-            </div>
-            <!-- <div class="galleryItems">
-                <a href="/img/karimabad2.jpg"><img src="/img/karimabad2.jpg" alt="" data-lightbox="models"
-                        data-title="Karimabad"></a>
-                <h3>images</h3>
-            </div> -->
-            <div class="galleryItems">
-                <a href="/img/waziristan.jpg"><img src="/img/waziristan.jpg" alt="" data-lightbox="models"
-                        data-title="Waziristan"></a>
-                <h3>Waziristan</h3>
+    <section id="contact">
+        <div id="containForm">
+            <h1>Contact Form:</h1>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="email">Email address</label>
+                <input type="email">
+                <label for="subject">Subject</label>
+                <input type="text">
+                <label for="moreInfo">Message</label>
+                <textarea name="moreInfo" id="textArea" rows="10"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="containLinks">
+            <h1>My Social <br> Media Handles</h1>
+            <div class="links">
+                <a href="https://instagram.com/"><img src="/img/instagramLogo.svg" alt="instaIcon" class="imgLogo"></a>
+                <a href="mailto:hamdanraza309@gmail.com"><img src="/img/mailLogo.svg" alt="EmailIcon"
+                        class="imgLogo"></a>
+                <a href="https://facebook.com"><img src="/img/facebookLogo.svg" alt="facebookIcon" class="imgLogo"></a>
+                <a href="https://github.com/HamdanRaza309"><img src="/img/githubIcon.svg" alt="githubIcon"
+                        class="imgLogo"></a>
+                <a href="https://pk.linkedin.com/"><img src="/img/linkedinIcon.svg" alt="linkedinIcon"
+                        class="imgLogo"></a>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- footer -->
     <footer>
@@ -324,7 +353,7 @@
             </div>
         </div>
     </footer>
-    <!-- <script  src="/js/lightbox-plus-jquery.js"></script> -->
+
 </body>
 
 </html>
