@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - A Website which reflecate my Personal views</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Roboto:ital,wght@0,400;1,700&family=Victor+Mono&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        background: url("https://www.indietraveller.co/wp-content/uploads/2019/01/home-banner-nepal-compressed.jpg") no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.8;
+
+    }
+
+    /* Navbar */
+    #nav {
+        /* border: 2px solid blue; */
+        font-family: cursive;
+    }
+
+    #nav img {
+        height: 45px;
+        margin: 0px 100px;
+    }
+
+    #nav ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    #nav ul li {
+        margin: 10px;
+    }
+
+    /* HomeBody */
+    #homeBody {
+        /* border: 2px solid red; */
+        display: flex;
+        align-items: center;
+        height: 60vh;
+        width: 80%;
+        margin: 5rem 15rem;
+        text-align: center;
+    }
+
+    #homeBody::before {
+        content: "";
+        position: absolute;
+        top: 135px;
+        background-color: #4b2727;
+        height: 60%;
+        width: 80%;
+        z-index: -1;
+        opacity: 0.3;
+    }
+
+    #homeBody #firstDiv {
+        /* border: 2px solid rgb(117, 32, 196); */
+        height: 100px;
+        width: 500px;
+        font-size: 1.4rem;
+        color: rgb(255, 255, 255);
+    }
+
+    #homeBody #h-line {
+        height: 100px;
+        width: 4px;
+        background: #d1e709;
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    #homeBody #secondDiv {
+        /* border: 2px solid rgb(27, 177, 127); */
+        height: 200px;
+        width: 1300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+
+    }
+
+    #homeBody #secondDiv img {
+        height: 200px;
+        border-radius: 50%;
+        margin: 20px;
+
+    }
+
+    #homeBody #secondDiv #ContainIntroLinks p {
+        /* color: rgb(126 119 119); */
+        color: #ffffff;
+        font-size: 1rem;
+        margin: 20px;
+        /* border: 3px solid red ; */
+        /* background: #d1d1d1; */
+        padding: 8px;
+        border-radius: 13px;
+        font-family: 'Baloo Bhaijaan 2', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Victor Mono', monospace;
+        font-weight: bold;
+    }
+
+    /* footer */
+    footer {
+        /* border: 3px solid purple; */
+        grid-area: footer;
+        width: 98.7vw;
+        height: 100%;
+        background: #101d31;
+        color: rgb(161, 159, 159);
+
+    }
+
+    footer .containFooter {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .containFooter .footerItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+
+    footer .containFooter .footerItems .footerLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .containFooter .v-line {
+        width: 2px;
+        height: 25rem;
+        background: yellow;
+    }
+
+    /* Utility Classes */
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        margin: 20px;
+        font-weight: bold;
+        transition: all .2s ease-in-out .1s;
+    }
+
+    a:hover {
+        color: rgb(59, 172, 224);
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.3rem;
+        padding: 30px;
+    }
+
+    .imgLogo {
+        height: 50px;
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: monospace;
+        font-weight: bold;
+        color: #f9004d;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .m {
+        margin: 10px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav id="nav">
+        <ul>
+            <li><img src="/img/logo.svg" alt="logo"></li>
+            <li><a href="">Home</a></li>
+            <li><a href="/html/stories.html">Stories</a></li>
+            <li><a href="/html/destinations.html">Destinations</a></li>
+            <li><a href="/html/photos.html">Photos</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="homeBody">
+        <div id="firstDiv">
+            <h1>Let's Begin Your ADVANTURE with Us.</h1>
+        </div>
+        <div id="h-line">
+
+        </div>
+        <div id="secondDiv">
+            <img src="/img/displayPic.jpg" alt="pic">
+            <div id="ContainIntroLinks">
+                <p>Hi, I’m Hamdan! I’ve been living a life of travel for over 10 years. My guides will help you travel
+                    Anywhere: not with a tour, but going your own way. Where’s your next adventure?</p>
+                <a href="">TRAVEL IDEAS</a>
+                <a href="/html/contact.html">CONTACT</a>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="containFooter">
+            <div class="footerItems m">
+                <h2>Stay in Touch</h2>
+                <div class="m">
+                    <a href="https://instagram.com/"><img src="/img/instagramLogo.svg" alt="instaIcon"
+                            class="imgLogo"></a>
+                    <a href="mailto:hamdanraza309@gmail.com"><img src="/img/mailLogo.svg" alt="EmailIcon"
+                            class="imgLogo"></a>
+                    <a href="https://facebook.com"><img src="/img/facebookLogo.svg" alt="facebookIcon"
+                            class="imgLogo"></a>
+                    <a href="https://github.com/HamdanRaza309"><img src="/img/githubIcon.svg" alt="githubIcon"
+                            class="imgLogo"></a>
+                    <a href="https://pk.linkedin.com/"><img src="/img/linkedinIcon.svg" alt="linkedinIcon"
+                            class="imgLogo"></a>
+                </div>
+            </div>
+            <div class="v-line m"></div>
+            <div class="footerItems m">
+                <h2>About</h2>
+                <div>
+                    <p>Paradise Travels is your gateway to extraordinary journeys around the world. We are more than
+                        just a travel agency; we are your adventure partners, your culture explorers, and your
+                        memory-makers. With a passion for travel and a commitment to excellence, we curate unforgettable
+                        experiences that leave a lasting imprint</p>
+                </div>
+            </div>
+            <div class="v-line m"></div>
+            <div class="footerItems m">
+                <h2>Visit To</h2>
+                <div class="footerLinks">
+                    <a href="/html/index.html">Home</a>
+                    <a href="/html/stories.html">Stories</a>
+                    <a href="/html/destinations.html">Destinations</a>
+                    <a href="/html/photos.html">Photos</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
